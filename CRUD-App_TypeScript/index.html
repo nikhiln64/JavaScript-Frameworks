@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD - App</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="destination/itemmodel.js"></script>
+    <script src="destination/utils.js"></script>
+    <script src="destination/itemoperations.js"></script>
+    <script src="destination/itemcontroller.js"></script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Item Info</legend>
+        <table>
+            <tr>
+                <td><label for="">ItemNo</label></td>
+                <td><input id="itemid" type="text" placeholder="Type Item Id"></td>
+            </tr>
+            <tr>
+                <td><label for="">Name</label></td>
+                <td><input id="itemname" type="text" placeholder="Type Item Name"></td>
+            </tr>
+            <tr>
+                <td><label for="">Price</label></td>
+                <td><input id="itemprice" type="range" value="1" min="1" max="10000" step="100"></td>
+            </tr>
+            <tr>
+                <td><label for="">Desc</label></td>
+                <td><textarea id="itemdesc" rows="10" cols="30" placeholder="Type Desc Here"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="">Image</label></td>
+                <td><input id="itemimage" type="text" value="https://store.storeimages.cdn-apple.com/4662/as-images.apple.com/is/image/AppleInc/aos/published/images/H/HX/HHXT2/HHXT2_AV1?wid=1000&hei=1000&fmt=jpeg&qlt=95&op_sharpen=0&resMode=bicub&op_usm=0.5,0.5,0,0&iccEmbed=0&layer=comp&.v=aS8lJ0"
+                        placeholder="Image">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="">Color</label></td>
+                <td><input id="itemcolor" type="color">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td><button id="addButton">Add</button></td>
+                            <td><button id="deleteButton">Delete</button></td>
+                            <td><button>Search</button></td>
+                            <td><button>Update</button></td>
+                            <td><button>Sort</button></td>
+                            <td><button id="saveButton">Save</button></td>
+                            <td><button id="loadButton">Load</button></td>
+                            <td><button>Load From Server</button></td>
+                            <td><button>Clear All</button></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <h2>Total Records are <span id="total"></span> Mark are <span id="mark"></span> and unmark are <span id="unmark"></span> </h2>
+    <fieldset>
+        <legend>Item List</legend>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Desc</th>
+                    <th>Price</th>
+                    <th>Image</th>
+                    <th>Color</th>
+                    <th>Operations</th>
+                </tr>
+            </thead>
+            <tbody id="itemlist">
+
+            </tbody>
+        </table>
+    </fieldset>
+
+</body>
+
+</html>
