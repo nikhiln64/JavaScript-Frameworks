@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "ES6",                          /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', or 'ESNEXT'. */
+    "strict": false,
+    "allowJs": true,
+    "outDir": "destination",
+    "noImplicitAny": false,
+    "sourceMap": false
+  }
+}
