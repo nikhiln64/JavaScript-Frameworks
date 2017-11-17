@@ -1,0 +1,12 @@
+<fieldset>
+    <legend>Requested Data</legend>
+    Welcome
+    <div>
+      <ul>
+            <li *ngFor="let product of productArray">
+                {{product.id}} {{product.name}} {{product.price}}
+                <img src="{{product.url}}">
+            </li>
+        </ul>
+    </div>
+  </fieldset>
