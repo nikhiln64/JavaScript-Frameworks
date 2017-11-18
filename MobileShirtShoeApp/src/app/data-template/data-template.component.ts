@@ -7,37 +7,22 @@ import {ProductService} from '../productservice';
   templateUrl: './data-template.component.html',
   styleUrls: ['./data-template.component.css']
 })
+
 export class DataTemplateComponent  {
   error: string;
   productArray: Product[];
+  productSub: any;
   constructor(private productService: ProductService) {
-  }
-  
-
-  loadMobiles(){
-    let promise  = this.productService.fetchMobiles();
-    promise.then(productArr => {
-        return this.productArray = productArr;
-      }).catch((err) => {
-       this.error = err;
-      });
+    this.productService = productService;
   }
 
-  loadShirts() {
-    let promise  = this.productService.fetchShirts();
-    promise.then(productArr => {
-         return this.productArray = productArr;
-      }).catch((err) => {
-       this.error = err;
-      });
+  ngOnInit() {
+    this.productSub = this.productService.products$.subscribe(
+        products => this.productArray = products,
+        err => this.error = err
+    );
+    console.log(this.productSub);
   }
 
-  loadShoes() {
-    let promise  = this.productService.fetchShoes();
-    promise.then(productArr => {
-      return  this.productArray = productArr;
-      }).catch((err) => {
-       this.error = err;
-      });
-  }
+  ngOnDestroy() { this.productSub.unsubscribe(); }
 }

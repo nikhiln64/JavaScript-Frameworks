@@ -7,18 +7,11 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { DataTemplateComponent } from './data-template/data-template.component';
 
-
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavigationComponent,
-    DataTemplateComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpModule
-  ],
+  declarations: [AppComponent,NavigationComponent,DataTemplateComponent],
+  imports: [BrowserModule,HttpModule],
   providers: [ProductService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

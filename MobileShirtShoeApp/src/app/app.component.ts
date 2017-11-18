@@ -8,5 +8,5 @@ import {Product} from './product';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'MobileShirtShoeApp';
+  title = 'All In One Store';
 }
