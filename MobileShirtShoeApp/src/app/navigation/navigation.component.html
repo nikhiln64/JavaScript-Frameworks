@@ -1,11 +1,16 @@
 <fieldset>
-  <legend>Navigate</legend>
+  <legend>Welcome</legend>
   <div>
       <button  (click)="loadMobiles()">Mobiles</button>
-      <button (click)="loadShirts()">Shirts</button>
-      <button (click)="loadShoes()">Shoes</button>
+      <button (click)="loadShirts()">Appearals</button>
+      <button (click)="loadShoes()">Footware</button>
   </div>
-  <app-data-template></app-data-template>
+  <div>
+    <fieldset>
+            <legend>
+                    {{productName}}
+            </legend>
+            <app-data-template></app-data-template>
+    </fieldset>
+  </div>
 </fieldset>
-
- 

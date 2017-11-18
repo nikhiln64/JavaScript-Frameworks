@@ -12,31 +12,26 @@ import {DataTemplateComponent} from '../data-template/data-template.component';
 export class NavigationComponent implements OnInit {
   error: string;
   productArray: Product[];
-
+  productName: string;
   constructor(private myService: ProductService){
     this.myService = myService;
   }
 
-  dataTemplateComponent: DataTemplateComponent = new DataTemplateComponent(this.myService);
-
   ngOnInit() {
   }
 
- /*constructor(productService: ProductService) {
-    this.productService = productService;
-  }*/
-
   loadMobiles() {
-   return this.dataTemplateComponent.loadMobiles();
+    this.productName = "Mobile Store";
+    this.myService.loadMobiles();
   }
 
   loadShirts() {
-    return this.dataTemplateComponent.loadShirts();
+    this.productName = "Appearals Store";
+    this.myService.loadShirts();
   }
 
   loadShoes() {
-    return this.dataTemplateComponent.loadShoes();
+    this.productName = "Footware Store";
+    this.myService.loadShoes();
   }
-
-
 }
