@@ -1,0 +1,11 @@
+a{
+    padding: 50px;
+}
+
+button{
+    height: 50px;
+    width: 100px;
+    background-color: transparent;
+    color: blue;
+    font-style: italic;
+}

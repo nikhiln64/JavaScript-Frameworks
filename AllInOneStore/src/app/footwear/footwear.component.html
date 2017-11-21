@@ -1,0 +1,11 @@
+<table>
+    <tr>
+        <td *ngFor="let product of productArray">
+            <div>
+                <img src="{{product.url}}"> <br>
+                Company: {{product.name}} <br>
+                Price: ${{product.price}}
+            </div>
+        </td>
+    </tr>
+</table>
